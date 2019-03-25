@@ -29,5 +29,5 @@ spec:
           protocol: TCP
         env:
         - name: TEST_NODE_URL
-          value: "http://test-node.default.svc.cluster.local/"
+          value: "test-node.default.svc.cluster.local"
 
