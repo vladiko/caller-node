@@ -16,7 +16,7 @@ run_params:
         - "sg-03eef5d8f0eefa149"
       assign_public_ip: DISABLED
   service_discovery:
-    container_name: ecsdemo-nodejs
+    container_name: caller-node
     service_discovery_service:
-        name: ecsdemo-nodejs
+        name: caller-node
         description: string

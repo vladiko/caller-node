@@ -1,12 +1,12 @@
 version: '3'
 services:
-  ecsdemo-nodejs:
-    image: brentley/ecsdemo-nodejs
+  caller-node:
+    image: vladiko/caller-node
     ports:
       - "3000:3000"
     logging:
       driver: awslogs
       options: 
-        awslogs-group: ecsdemo-nodejs
+        awslogs-group: caller-node
         awslogs-region: ${AWS_REGION}
-        awslogs-stream-prefix: ecsdemo-nodejs
+        awslogs-stream-prefix: caller-node
