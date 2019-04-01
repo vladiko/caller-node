@@ -59,7 +59,7 @@ app.get('/close', function (req, res) {
 });
 
 // health route - variable subst is more pythonic just as an example
-var server = app.listen(80, function () {
+var server = app.listen(3000, function () {
   var port = server.address().port;
   setTimeout(() => {
     sendMesageToTest(`${server_name} LISTENING on port ${port} `);
