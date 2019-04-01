@@ -25,9 +25,14 @@ spec:
         imagePullPolicy: Always
         name: caller-node
         ports:
-        - containerPort: 3000
+        - containerPort: 80
           protocol: TCP
         env:
         - name: TEST_NODE_URL
           value: "test-node.default.svc.cluster.local"
-
+        lifecycle:
+          preStop:
+            httpGet:
+              path: close
+              port: 80
+      terminationGracePeriodSeconds: 20
